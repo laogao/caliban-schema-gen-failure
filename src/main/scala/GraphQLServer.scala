@@ -547,7 +547,7 @@ object GraphQLServer extends zio.App:
       )
       _ <- Server
         .start(
-          8099,
+          9999,
           Http.route[Request] {
             case _ -> !! / "api" / "graphql" =>
               ZHttpAdapter.makeHttpService(interpreter)
